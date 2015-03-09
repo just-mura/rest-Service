@@ -4,7 +4,6 @@ from hwRestService.blog.api import PostResource
 from hwRestService.blog.api import CommentResource
 
 post_resource = PostResource()
-comment_resource = CommentResource();
 
 urlpatterns = patterns('',
     # Examples:
@@ -12,6 +11,6 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    (r'^api/v1/', include(post_resource.urls)),
+    (r'^api/', include(post_resource.urls)),
     (r'^api/v1/', include(comment_resource.urls)),
 )
