@@ -8,7 +8,7 @@ class Post(models.Model):
 	text      = models.CharField(max_length = 100)
 	pub_date  = models.DateTimeField(auto_now_add = True)
 	upd_date  = models.DateTimeField(auto_now = True)
-	is_public = models.BooleanField(default = False)
+	is_public = models.BooleanField(default = True)
 
 class Comment(models.Model):
 	author    = models.CharField(max_length = 30)
