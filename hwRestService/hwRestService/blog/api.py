@@ -16,7 +16,7 @@ class PostResource(ModelResource):
 
 class CommentResource(ModelResource):
 	#author = fields.CharField(attribute="author")
-    post = fields.ToOneField('hwRestService.blog.api.PostResource', 'post',null=True) 
+    #post = fields.ToOneField('hwRestService.blog.api.PostResource', 'post',null=True) 
 	class Meta:
 		queryset = models.Comment.objects.all()
 		resource_name = 'comment'
